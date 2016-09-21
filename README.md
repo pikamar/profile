@@ -11,6 +11,7 @@ My linux profile
 # Docker aliases
 ##delete all stopped containers
 docker rm $(docker ps -a -q)
+docker rm $(docker ps -a -q -f status=exited)
 
 ## Last container id
 alias dl='docker ps -l -q'
